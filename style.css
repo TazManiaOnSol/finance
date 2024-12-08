@@ -178,8 +178,8 @@ footer {
 }
 
 .social-icon {
-    width: 40px;  /* Adjust size as needed */
-    height: 40px;
+    width: 69px;  /* Adjust size as needed */
+    height: 57px;
     border-radius: 50%; /* Makes the image circular */
     object-fit: cover; /* Ensures the image covers the area */
     transition: transform 0.3s ease;
