@@ -1,0 +1,140 @@
+/* Basic styling for body */
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Header navigation */
+header {
+    background-color: #00bcd4;
+    padding: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-image: url('https://drive.google.com/uc?id=1XOGMoigS6pnAxtFntyiqvMd4vTXtY3kr');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-bottom: 5px solid #fff;
+}
+
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Social links */
+.social-links a {
+    background-color: #ff4081;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    margin: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #00bcd4;
+}
+
+/* Education section */
+#education {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.education-image {
+    max-width: 80%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Buy section */
+#buy {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ff4081;
+}
+
+#buy button {
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#buy button:hover {
+    background-color: #ff4081;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .social-links a {
+        padding: 10px 20px;
+    }
+
+    .education-image {
+        max-width: 100%;
+    }
+}
