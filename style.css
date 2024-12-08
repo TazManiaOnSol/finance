@@ -8,13 +8,22 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-y: auto;   /* Allow vertical scroll */
+    height: 100%; /* Ensure body takes up full height */
 }
 
 /* Header navigation */
+/* Fix the header at the top */
 header {
     background-color: #00bcd4;
     padding: 10px;
+    position: sticky;  /* Fixes header to top */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the header stays on top of other content */
 }
+
 
 header nav ul {
     list-style: none;
@@ -33,16 +42,6 @@ header nav ul li a {
 }
 
 /* Hero section */
-.hero {
-    text-align: center;
-    padding: 50px 20px;
-    background-image: url('https://drive.google.com/uc?id=1XOGMoigS6pnAxtFntyiqvMd4vTXtY3kr');
-
-    background-size: cover;
-    background-position: center;
-    color: white;
-    border-bottom: 5px solid #fff;
-}
 
 
 .hero h1 {
@@ -64,7 +63,7 @@ header nav ul li a {
 
 /* Social links */
 .social-links a {
-    background-color: #ff4081;
+    background-color: #40ff50c4;
     color: #fff;
     text-decoration: none;
     padding: 15px 30px;
@@ -95,7 +94,7 @@ header nav ul li a {
 #buy {
     text-align: center;
     padding: 40px 20px;
-    background-color: #ff4081;
+    background-color: #40ff50c4;
 }
 
 #buy button {
@@ -110,7 +109,7 @@ header nav ul li a {
 }
 
 #buy button:hover {
-    background-color: #ff4081;
+    background-color: #66ff405d;
 }
 
 /* Footer */
@@ -139,6 +138,7 @@ footer {
         max-width: 100%;
     }
 }
+
 #price-bar {
     background-color: #2c3e50;
     color: white;
@@ -160,6 +160,7 @@ footer {
 .price-label {
     font-weight: bold;
 }
+
 /* Add responsive styles for TradingView Widget */
 .tradingview-widget-container {
     width: 100%;
@@ -169,8 +170,7 @@ footer {
 
 .tradingview-widget-container__widget {
     width: 100% !important;
-    max-width: 100% !important;
-    height: 550px; /* Ensure height is set */
+    height: 450px; /* Reduce height slightly */
 }
 
 /* Ensure the widget works well on mobile */
