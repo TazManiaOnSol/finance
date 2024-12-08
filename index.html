@@ -88,27 +88,62 @@
             padding: 40px 20px;
         }
 
+        /* Futuristic Hero Section */
         .hero {
             text-align: center;
             margin-bottom: 30px;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            text-transform: uppercase;
+            color: #00ff00;
+            text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff;
+            animation: neonGlow 1.5s ease-in-out infinite alternate;
+        }
+
+        .hero p {
+            font-size: 24px;
+            color: #fff;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
         }
 
         .hero-image {
             width: 100%;
             max-width: 600px;
             margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.7);
+        }
+
+        @keyframes neonGlow {
+            0% {
+                text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
+            }
+            100% {
+                text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 50px #ff00ff, 0 0 100px #ff00ff;
+            }
         }
 
         .social-links a {
             color: #00ff00;
             margin: 0 10px;
             font-size: 18px;
+            text-shadow: 0 0 5px #00ff00;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ff00ff;
         }
 
         .education-image {
             width: 100%;
             max-width: 600px;
             margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 0, 255, 0.7);
         }
 
         footer {
@@ -140,8 +175,6 @@
             text-align: center;
         }
 
-        
-
         .price-bar-item {
             font-size: 18px;
         }
@@ -153,6 +186,19 @@
         .price-bar-value {
             color: #00ff00;
         }
+
+        /* Animation for looping neon lights on the hero section */
+     
+
+        @keyframes neonLoop {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -168,7 +214,7 @@
 
     <!-- Financial Market Tape -->
     <div class="market-tape" id="market-tape">
-        Live Market Updates: Bitcoin (BTC) $<span id="btc-price">0.00</span> | Ethereum (ETH) $<span id="eth-price">0.00</span> | Solana (SOL) $<span id="sol-price">0.00</span>
+        Live Market Updates: Bitcoin (BTC) <span id="btc-price">0.00</span> | Ethereum (ETH) <span id="eth-price">0.00</span> | Solana (SOL) <span id="sol-price">0.00</span>
     </div>
 
     <!-- Binance Widget for Crypto Prices -->
@@ -182,12 +228,11 @@
          data-disclaimer="Disclaimer">
     </div>
 
-  
-
     <section id="home">
         <div class="hero">
             <h1>The Big Short</h1>
             <p>Learn how the mortgage crisis connects to our meme token future.</p>
+            <div class="neon-loop"></div>
             <img src="https://www.gstatic.com/webp/gallery/2.jpg" alt="Meme Token Crisis Image" class="hero-image">
         </div>
         <div class="social-links">
