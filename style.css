@@ -37,6 +37,7 @@ header nav ul li a {
     text-align: center;
     padding: 50px 20px;
     background-image: url('https://drive.google.com/uc?id=1XOGMoigS6pnAxtFntyiqvMd4vTXtY3kr');
+
     background-size: cover;
     background-position: center;
     color: white;
@@ -136,5 +137,46 @@ footer {
 
     .education-image {
         max-width: 100%;
+    }
+}
+#price-bar {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.price-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.price-item {
+    font-size: 18px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.price-label {
+    font-weight: bold;
+}
+/* Add responsive styles for TradingView Widget */
+.tradingview-widget-container {
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.tradingview-widget-container__widget {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 550px; /* Ensure height is set */
+}
+
+/* Ensure the widget works well on mobile */
+@media (max-width: 768px) {
+    .tradingview-widget-container__widget {
+        width: 100% !important;
+        height: 400px; /* Slightly reduce the height for mobile */
     }
 }
